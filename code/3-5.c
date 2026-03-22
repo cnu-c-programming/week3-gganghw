@@ -6,7 +6,10 @@ void my_sum(char type, int count, ...){
     switch(type){
         case 'S':
         for(int i = 0; i < count; i++){
-            printf("%s ",va_arg(ap, char *));
+            printf("%s",va_arg(ap, char *));
+            if(i < count){
+                printf(" ");
+            }
         }
         va_end(ap);
         printf("\n");
